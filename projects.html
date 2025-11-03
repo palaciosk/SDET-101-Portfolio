@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project portfolio showcasing web development projects">
+    <title>Projects - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p class="page-subtitle">A showcase of my recent work</p>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="container">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-carousel">
+                        <div class="carousel-container" id="carousel1" role="region" aria-label="E-Commerce Platform project carousel">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #1a1a2e 40%, #667eea 100%);" role="img" aria-label="E-Commerce Platform Screenshot 1">
+                                    <p>E-Commerce Platform Screenshot 1</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #1a1a2e 40%, #f093fb 100%);" role="img" aria-label="E-Commerce Platform Screenshot 2">
+                                    <p>E-Commerce Platform Screenshot 2</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #0a1828 40%, #4facfe 100%);" role="img" aria-label="E-Commerce Platform Screenshot 3">
+                                    <p>E-Commerce Platform Screenshot 3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(1, -1)" aria-label="Previous slide">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(1, 1)" aria-label="Next slide">›</button>
+                        <div class="carousel-dots" role="tablist" aria-label="Project image slides">
+                            <button type="button" class="dot active" onclick="currentSlide(1, 0)" aria-label="Go to slide 1" role="tab" aria-selected="true" tabindex="0"></button>
+                            <button type="button" class="dot" onclick="currentSlide(1, 1)" aria-label="Go to slide 2" role="tab" aria-selected="false" tabindex="0"></button>
+                            <button type="button" class="dot" onclick="currentSlide(1, 2)" aria-label="Go to slide 3" role="tab" aria-selected="false" tabindex="0"></button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>E-Commerce Platform</h2>
+                        <p class="project-description">
+                            A full-stack e-commerce platform built with React and Node.js. Features include 
+                            user authentication, shopping cart, payment integration, and admin dashboard. 
+                            The platform supports real-time inventory management and provides a seamless 
+                            shopping experience with responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Code</a>
+                            <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-carousel">
+                        <div class="carousel-container" id="carousel2" role="region" aria-label="Task Management Application project carousel">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #2d1b3d 40%, #fa709a 100%);" role="img" aria-label="Task Management App Screenshot 1">
+                                    <p>Task Management App Screenshot 1</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #1a0a2e 40%, #30cfd0 100%);" role="img" aria-label="Task Management App Screenshot 2">
+                                    <p>Task Management App Screenshot 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(2, -1)" aria-label="Previous slide">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(2, 1)" aria-label="Next slide">›</button>
+                        <div class="carousel-dots" role="tablist" aria-label="Project image slides">
+                            <button type="button" class="dot active" onclick="currentSlide(2, 0)" aria-label="Go to slide 1" role="tab" aria-selected="true" tabindex="0"></button>
+                            <button type="button" class="dot" onclick="currentSlide(2, 1)" aria-label="Go to slide 2" role="tab" aria-selected="false" tabindex="0"></button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>Task Management Application</h2>
+                        <p class="project-description">
+                            A collaborative task management application built with Vue.js and Firebase. 
+                            Enables teams to organize tasks, set priorities, track progress, and 
+                            collaborate in real-time. Features include drag-and-drop functionality, 
+                            deadline reminders, and team member assignments.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Code</a>
+                            <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-carousel">
+                        <div class="carousel-container" id="carousel3" role="region" aria-label="Weather Dashboard project carousel">
+                            <div class="carousel-slide active">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #0a1e2e 40%, #4facfe 100%);" role="img" aria-label="Weather Dashboard Screenshot 1">
+                                    <p>Weather Dashboard Screenshot 1</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #2d1b3d 40%, #ff9a9e 100%);" role="img" aria-label="Weather Dashboard Screenshot 2">
+                                    <p>Weather Dashboard Screenshot 2</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="image-placeholder project-image" style="background: linear-gradient(135deg, #000000 0%, #2e1f1a 40%, #ff6b6b 100%);" role="img" aria-label="Weather Dashboard Screenshot 3">
+                                    <p>Weather Dashboard Screenshot 3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" onclick="changeSlide(3, -1)" aria-label="Previous slide">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(3, 1)" aria-label="Next slide">›</button>
+                        <div class="carousel-dots" role="tablist" aria-label="Project image slides">
+                            <button type="button" class="dot active" onclick="currentSlide(3, 0)" aria-label="Go to slide 1" role="tab" aria-selected="true" tabindex="0"></button>
+                            <button type="button" class="dot" onclick="currentSlide(3, 1)" aria-label="Go to slide 2" role="tab" aria-selected="false" tabindex="0"></button>
+                            <button type="button" class="dot" onclick="currentSlide(3, 2)" aria-label="Go to slide 3" role="tab" aria-selected="false" tabindex="0"></button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>Weather Dashboard</h2>
+                        <p class="project-description">
+                            An interactive weather dashboard that provides real-time weather information 
+                            and forecasts. Built with vanilla JavaScript and integrates with a weather 
+                            API to display current conditions, hourly forecasts, and 7-day predictions. 
+                            Features include location search, weather maps, and beautiful data visualization.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Weather API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Code</a>
+                            <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Live Demo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Portfolio. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
